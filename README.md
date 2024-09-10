@@ -4,14 +4,19 @@
 
 ### Curriculum
 
-- Week 01 : Multivariate Time Series Models
-- Week 02 : State Space Models
-- Week 03 : Time Series Machine Learning
-- Week 04 : Neural Networks
-- Week 05 : Sampling and Labeling
-- Week 06 : Weights and Autocorrelation
-- Week 07 : Ensemble Models and Cross Validation
-- Week 08 : Explainable Machine Learning
-- Week 09 : Dimension Reduction
-- Week 10 : Machine Learning Allocation
-- Week 11 : Synthetic Simulation
+- Week 01 : Statistical Learning
+- Week 02 : Machine Learning
+- Week 03 : Advanced Vector Process
+- Week 04 : Advanced Heteroscedasticity Models
+- Week 05 : Data Resampling
+- Week 06 : Labeling
+- Week 07 : Sample Weights
+- Week 08 : Pipeline Modeling
+- Week 09 : Explainability
+- Week 10 : Microstructural Features
+- Week 11 : Bet Sizing
+- Week 12 : Backtesting & Monte Carlo Simulation
+- Week 13 : Allocation
+- Week 14 : Signal Extraction & Smoothing
+- Week 15 : Regime Change
+- Week 16 : Causal Factor Modeling
