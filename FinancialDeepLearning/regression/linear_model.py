@@ -58,7 +58,6 @@ class LinearRegression(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.network(x)
 
-
 class LinearNet(object):
     def __init__(self, X: pd.DataFrame, y: pd.Series | pd.DataFrame) -> None:
         super(LinearNet, self).__init__()
@@ -142,6 +141,12 @@ class LinearNet(object):
         res = pd.Series(predicted.squeeze(), index=self.X.index, name='fittedvalues')
         return res
 
+    def resid(self) -> pd.Series:
+        y_pred = self.fittedvalues()
+        resid = self.y - y_pred
+        resid.name = 'residual'
+        return resid
+
     def calculate_weights_and_bias(self):
         params = list(self.model.parameters()) # params list setting
 
@@ -173,4 +178,3 @@ class LinearNet(object):
             y_pred=y_pred
         ).summary(weights, bias)
         return smry
-
