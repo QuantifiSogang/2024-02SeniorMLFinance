@@ -137,8 +137,7 @@ class SimpleRecurrentNeuralNet(object):
             criterion: str,
             optimizer: str,
             activation_function: str = 'relu',
-            hidden_layers: int = 2,
-            num_layers: int = 1,
+            hidden_layers: int = 1,
             learning_rate: float = 0.001,
             num_epochs: int = 10,
             batch_size: int = 2,
@@ -175,24 +174,24 @@ class SimpleRecurrentNeuralNet(object):
         if self.method.lower() == 'rnn':
             self.model = RecurrentNeuralNetwork(
                 self.p,
-                hidden_layers,
+                self.p,
                 output_size,
-                num_layers
+                hidden_layers
             )
         elif self.method.lower() == 'alpha-rnn':
             self.model = AlphaRNN(
                 self.p,
-                hidden_layers,
+                self.p,
                 output_size,
-                num_layers,
+                hidden_layers,
                 alpha=alpha
             )
         elif self.method.lower() == 'alphat-rnn':
             self.model = AlphatRNN(
                 self.p,
-                hidden_layers,
+                self.p,
                 output_size,
-                num_layers,
+                hidden_layers,
             )
         else:
             assert ValueError('Method is not supported.')

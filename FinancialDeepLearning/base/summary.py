@@ -193,14 +193,18 @@ class TimeSeriesResult(object):
         param_variances = mse * np.diag(XTX_inv)
         std_err = np.sqrt(param_variances)  # Standard error
 
-        # Estimated t-values and p-values
-        t_values = np.append(bias, weights) / std_err
-        p_values = 2 * (1 - stats.t.cdf(np.abs(t_values), df=n - p))
+        combined_params = np.concatenate(([bias], weights), axis=0)
+        if len(combined_params) != len(std_err):
+            raise ValueError(
+                f"Length mismatch between parameters and standard errors: {len(combined_params)} vs {len(std_err)}")
 
-        # Confidence intervals
+        # Estimated t-values and p-values
+        t_values = combined_params / std_err
+        p_values = 2 * (1 - stats.t.cdf(np.abs(t_values), df = n - p))
+
         conf_int = np.column_stack([
-            np.append(bias, weights) - 1.96 * std_err,
-            np.append(bias, weights) + 1.96 * std_err
+            combined_params - 1.96 * std_err,
+            combined_params + 1.96 * std_err
         ])
 
         # Params data
