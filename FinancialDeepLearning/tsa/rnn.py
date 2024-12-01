@@ -141,7 +141,8 @@ class SimpleRecurrentNeuralNet(object):
             learning_rate: float = 0.001,
             num_epochs: int = 10,
             batch_size: int = 2,
-            alpha: float = 0.5) -> torch.nn.Module:
+            alpha: float = 0.5
+        ) -> torch.nn.Module:
 
         # Define the loss function
         if criterion == 'mse':
