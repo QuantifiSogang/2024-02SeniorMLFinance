@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 __docformat__ = 'restructuredtext en'
 __author__ = "<Tommy Lee>"
-__all__ = []
+__all__ = ['AlphaRNNCell','AlphatRNNCell']
 
 
 class AlphaRNNCell(nn.Module):

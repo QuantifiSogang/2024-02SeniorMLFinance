@@ -73,7 +73,7 @@ class LinearNet(object):
         hidden_layers: list = [],  # List of hidden layer dimensions, if the list is empty, then the model has no hidden layer
         learning_rate: float = 0.001,
         num_epochs: int = 10
-    ) -> None:
+    ) -> torch.nn.Module :
 
         # Define the loss function
         if criterion.lower() == 'mse':
