@@ -2,6 +2,10 @@
 
 2024학년도 2학기 Senior ML Finance Team 학습자료
 
+2025년도 ML Finance Lab 레포지토리가 생성되었습니다. 최신 자료는 아래 링크에서 다운받으실 수 있습니다.
+
+https://github.com/QuantifiSogang/2025-01MLFinanceLab
+
 ### References
 
 | Book No. |                                                     Cover                                                      |                          Author                           |                                                                                Chapter                                                                                |
